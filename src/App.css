@@ -1,0 +1,120 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(145deg, #8fd3f4, #84fab0);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1000px; /* 3D perspective */
+}
+
+.app {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  transform-style: preserve-3d;
+  animation: floatIn 1s ease forwards;
+  transform: rotateX(10deg) rotateY(10deg);
+}
+
+@keyframes floatIn {
+  from {
+    transform: rotateX(90deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #aaa;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 220px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: inset 2px 2px 5px #ddd;
+}
+
+input:focus {
+  border-color: #4facfe;
+  transform: scale(1.03);
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background: linear-gradient(to right, #43e97b, #38f9d7);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #38f9d7, #43e97b);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #f5faff;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+li button {
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+li button:hover {
+  background-color: #ff3b3b;
+  transform: scale(1.1);
+}
